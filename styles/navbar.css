@@ -1,0 +1,58 @@
+/* Nav bar */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right{
+    width: 30%;
+}
+.right div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem;
+    border-radius: 10rem;
+    background-color: white;
+}
+.right img{
+    height: fit-content;
+    width: 4rem;
+}
+.left{
+    width: 70%;
+}
+.left .navigation{
+    padding-top: 1rem;
+    font-size: .8rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.left .navigation div{
+    font-family: 'Poppins mono', sans-serif;
+    color: var(--lightfont);
+    padding: .75rem;
+}
+.left .navigation a{    
+    font-family: 'Poppins mono', sans-serif;
+    text-decoration: none;
+    color: white;
+    padding: 0rem .5rem 0rem .5rem;
+    transition: all .25s ease;
+}
+.left .navigation a:hover{
+    transform: scale(1.1);
+    color: rgb(196, 196, 196);
+}
+.left .navigation .navbtn{
+    outline: none;
+    appearance: none;
+    background-color: #01202c;
+    border: none;
+    font-family: 'Poppins mono', sans-serif;
+    padding: 1rem;
+}
+/**/

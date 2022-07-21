@@ -1,0 +1,58 @@
+/* contact */
+.contact-icons{
+    position: fixed;
+    height: 100%;
+    width: 7%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.contact-icons .main-icons{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1rem;
+}
+.contact-icons .main-icons img{
+    height: 2rem;
+    width: 2rem;
+    padding: 1rem;
+    color: var(--dark);
+    transition: all .2s ease;
+}
+.contact-icons .main-icons img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.horizontal-line{
+    height: 10rem;
+    width: 1px;
+    background-color: white;
+}
+/**/
+
+/* contact name */
+.contact-name{
+    right: 0;
+    position: fixed;
+    width: 7%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.name{
+    color: white;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transition: all .2s ease;
+    margin-bottom: 2rem;
+}
+.name:hover{
+    color: var(--lightfont);
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+.contact-name .horizontal-line{
+    height: 12rem;
+}
+/**/
