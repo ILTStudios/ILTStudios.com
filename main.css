@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+html{
+    scroll-behavior: smooth;
+}
 :root{
     --black: #170043;
     --dark: #062F4F;
@@ -22,6 +24,8 @@ body{
     background-color: #01202c;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }.heading{
     padding-left: 3rem;
     font-size: 3rem;
@@ -31,7 +35,7 @@ body{
     height: 2px;
     width: 15rem;
     background-color: white;
-    transition: all .2s ease;
+    transition: all 2s ease;
 }.underline.open{
     width: 35rem;
 }
@@ -44,7 +48,7 @@ body{
     display: flex;
 }.main{
     width: 84%;
-    padding: 2rem 5rem 2rem 5rem;
+    padding: 5rem 5rem 2rem 5rem;
     color: white;
 }
 
@@ -67,6 +71,12 @@ body{
     font-weight: 300;
     word-spacing: 3px;
     color: rgb(156, 239, 255);
+}.introduction .subtext p span{
+    transition: all .2s ease;
+}.introduction .subtext p span:hover{
+    font-size: 1.15rem;
+    cursor: pointer;
+    color: var(--lightfont);
 }
 
 /**/

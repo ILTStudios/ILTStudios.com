@@ -1,8 +1,23 @@
+:root{
+    --black: #170043;
+    --dark: #062F4F;
+    --light: #813772;
+    --red: #B82601;
+    --font: #478fe2;
+    --lightfont: #58afd1;
+}
+
 /* Nav bar */
 .navbar{
+    z-index: 200;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    width: 100vw;
+    background-color: #01202c08;
+    backdrop-filter: blur(10px);
 }
 .right{
     width: 30%;
@@ -35,6 +50,9 @@
     font-family: 'Poppins mono', sans-serif;
     color: var(--lightfont);
     padding: .75rem;
+}
+.left .navigation button{
+    margin: 0rem 1.5rem 0rem 0rem;
 }
 .left .navigation a{    
     font-family: 'Poppins mono', sans-serif;
