@@ -130,7 +130,7 @@
                         <div class="main-details">
                             <div>
                                 <div>Age: </div>
-                                <div>15 years</div>
+                                <div>21 years</div>
                             </div>
                             <div>
                                 <div>Current Institution: </div>
