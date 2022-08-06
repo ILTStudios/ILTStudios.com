@@ -60,7 +60,7 @@
         <div class="main">
             <div id="home" class="introduction">
                 <div>Hi, My Name Is</div>
-                <div class="heading">Shreyas Vartia <br> 
+                <div class="heading">Unknown Unknown <br> 
                     <div>I make cool stuff on the internet</div>
                 </div>
                 <div class="subtext">
@@ -87,7 +87,7 @@
                 </div>
                 <div class="container">
                     <div class="subtext">
-                        Hi, I'm Shreyas Vartia and i'm pretty new in the whole developing scene. I've made quite a few Projects
+                        Hi, I'm (Unknown) and i'm pretty new in the whole developing scene. I've made quite a few Projects
                         in a whole slew of Technologies, ranging from Discord Bots, to Full on Apps. From Web Applications 
                         to Game Development. For now I'm focusing on just exploring all sorts of languages and their respective
                         techniques and logic. <br><br>
@@ -125,7 +125,7 @@
                             <div class="intro">
                                 Hi :DDD
                             </div>
-                            <div>Shreyas</div>
+                            <div>Unknown</div>
                         </div>
                         <div class="main-details">
                             <div>
