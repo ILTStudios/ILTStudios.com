@@ -62,42 +62,15 @@ const dropdown_menus = document.querySelector('.dropdowns');
 var identition = 0;
 var i = 0;
 const dropdown_subtext = [
-    {"Created several websites with traffic over the hundreds. Won a few web design comps and have developed 2 websites, fullstack.":[
-        "This is a Test",
-        "This is a bigger test :D",
-    ]},
-    {"First technology i've learnt, have about 2 years of experience and have published about 4 - 5 indie games both mobile and pc.":[
-        "This is a Test",
-        "This is a bigger test :D",        
-    ]},
-    {"Lately started producing software with technologies such as API's, Electron_JS, React Native, Node.JS and many more. Published a few.":[
-        "This is a Test",
-        "This is a bigger test :D",        
-    ]},
-    {"Learnt web dev along with HTML, CSS. Style of writing both have changed from relaying on tags to relaying on felx box css and using countless divs.":[
-        "This is a Test",
-        "This is a bigger test :D",        
-    ]},
-    {"Lately have started to love this language for its versatility, and easy writing. Have developed quite a few Desktop Apps, Websites, and Mobile Apps.":[
-        "This is a Test",
-        "This is a bigger test :D",        
-    ]},
-    {"First language i've learnt, use it for hardware projects for its fast compile time and easy use.":[
-        "This is a Test",
-        "This is a bigger test :D",        
-    ]},
-    {"Have developed quite a few games with C#, many of which through the unity development engine.":[
-        "This is a Test",
-        "This is a bigger test :D",        
-    ]},
-    {"Data projects, GUI, API Contacts, Discord Bots, a majority of my time has been spent on using learning python.":[
-        "This is a Test",
-        "This is a bigger test :D",        
-    ]},
-    {"Friend told me about rust, and ive loved it ever since. Haven't developed much other than simple basic programs.":[
-        "This is a Test",
-        "This is a bigger test :D",        
-    ]},
+    "Created several websites with traffic over the hundreds. Won a few web design comps and have developed 2 websites, fullstack.",
+    "First technology i've learnt, have about 2 years of experience and have published about 4 - 5 indie games both mobile and pc.",
+    "Lately started producing software with technologies such as API's, Electron_JS, React Native, Node.JS and many more. Published a few.",
+    "Learnt web dev along with HTML, CSS. Style of writing both have changed from relaying on tags to relaying on felx box css and using countless divs.",
+    "Lately have started to love this language for its versatility, and easy writing. Have developed quite a few Desktop Apps, Websites, and Mobile Apps.",
+    "First language i've learnt, use it for hardware projects for its fast compile time and easy use.",
+    "Have developed quite a few games with C#, many of which through the unity development engine.",
+    "Data projects, GUI, API Contacts, Discord Bots, a majority of my time has been spent on using learning python.",
+    "Friend told me about rust, and ive loved it ever since. Haven't developed much other than simple basic programs.",
 ]
 
 dropdown_menus.childNodes.forEach(element => {
@@ -107,20 +80,20 @@ dropdown_menus.childNodes.forEach(element => {
         var ident_label = element.childNodes;
         var subtext = document.createElement('div');
         subtext.classList.add('dropdown-subtext')
-        subtext.innerText = `${Object.keys(dropdown_subtext[i])}`;
+        subtext.innerText = `${dropdown_subtext[i]}`;
         ident_label[1].appendChild(subtext);
         i += 1;
 
-        //add info card
-        // var infocard_parent = document.querySelector('.experience');
-        // infocard_parent.innerHTML = "";
-        // const subtext_infocard_value = Object.values(dropdown_subtext[i]);
-        // subtext_infocard_value[0].forEach(element => {
-        //     infocard_parent.appendChild(document.createTextNode(element));
-        // });
+        //get a list of all experience content
+        const experience_content = document.querySelectorAll('.experience .subtext');
+        experience_content.forEach(element => {
+            element.style.display = 'none';
+        });
 
         // animation
         element.addEventListener('click', (e) => {
+            var experience_picker = element.id;
+            
             if(element.classList.contains("menu-dropdown")){
                 element.classList.remove('menu-dropdown');
                 element.classList.add('menu-dropdownopen');
@@ -131,7 +104,18 @@ dropdown_menus.childNodes.forEach(element => {
                         }, 20);
                     }
                 });
-            }else{
+
+                experience_content.forEach(exp_con => {
+                    if(exp_con.id == experience_picker){
+                        setTimeout(() => {
+                            exp_con.style.display = 'block';
+                        }, 200);
+                        exp_con.style.opacity = "1";
+                    }
+                });
+            }
+            
+            else{
                 element.classList.remove('menu-dropdownopen');
                 element.classList.add('menu-dropdown');
                 element.childNodes.forEach((element, indent) => {
@@ -139,6 +123,14 @@ dropdown_menus.childNodes.forEach(element => {
                         setTimeout(() => {
                             element.childNodes[1].style.display = 'none';
                         }, 200);
+                    }
+                });
+                experience_content.forEach(exp_con => {
+                    if(exp_con.id == experience_picker){
+                        exp_con.style.opacity = "0";
+                        setTimeout(() => {
+                            exp_con.style.display = 'none';
+                        }, 200)
                     }
                 });
             }
@@ -154,6 +146,38 @@ console.log(skill_program);
 document.querySelectorAll('.project-grid > div > img').forEach(element => {
     element.addEventListener('click', (e) => {
         e = e.target.src.split('/')[4].replace('.png', '');
-        console.log(e);
+    });
+});
+
+//know me menu animation
+const knowmeprofile_sub = document.querySelectorAll('#knowme-sub');
+knowmeprofile_sub[0].style.opacity = "1";
+knowmeprofile_sub[0].style.display = "block";
+
+document.querySelectorAll('#know-me-menu').forEach(element => {
+    element.addEventListener('click', (element) => {
+        element = element.target;
+        const layer_picker = element.classList;
+        const specific_layer = document.querySelector(`.knowme-sub.${element.innerText.replace(" ", '').toLowerCase()}`);
+        const total_layers = document.querySelectorAll('#knowme-sub');
+
+        specific_layer.style.opacity = "1";
+        setTimeout(() => {
+            specific_layer.style.display = "block";
+        }, 200)
+        
+        total_layers.forEach(elmn => {
+            if(elmn.classList[1] != layer_picker[0].split('-')[1]){
+                elmn.style.opacity = "0";
+                setTimeout(() => {
+                    elmn.style.display = "none";
+                }, 200)
+            }
+        });
+        
+        burger.classList.remove('open');
+        menu.style.width = "0%";
+        menu.style.opacity = 0;
+        is_open = false;
     });
 });

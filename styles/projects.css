@@ -49,7 +49,7 @@
 
 .project-grid > div{
     transition: all .2s ease;
-    width: fit-content;
+    width: max-content;
     /* width: fit-content;
     position: relative; */
 }.project-grid > div a{
@@ -62,7 +62,7 @@
     transition: all .2s ease;
     opacity: 0;
     padding: 0;
-    font-size: .5rem; text-align: center;
+    font-size: .65rem; text-align: center;
     width: 10vw;
     color: var(--lightfont)
 }

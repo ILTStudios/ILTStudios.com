@@ -91,6 +91,7 @@
 }.menu a:hover{
     color: var(--lightfont);
     transform: scale(1.1);
+    cursor: pointer;
 }
 /**/
 
@@ -121,6 +122,9 @@
     width: 100%;
     display: flex;
 }
+.pfp{
+    display: flex; justify-content: center; align-items: center;
+}
 .pfp img{
     height: 10rem;
     width: 10rem;
@@ -136,6 +140,20 @@
 }.name-tag div{
     font-size: 1.5rem;
     opacity: 1;
+}
+
+#knowme-sub{
+    opacity: 0;
+    display: none;
+    transition: all .2s ease;
+}
+.knowme-sub.personaldetails .heading{
+    font-size: 2rem;
+}
+.knowme-sub.personaldetails .subtext{
+    width: 75%;
+    padding: 0 0 0 4rem;
+    font-size: .75rem;
 }
 
 /**/
