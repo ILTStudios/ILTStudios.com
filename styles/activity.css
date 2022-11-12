@@ -1,0 +1,104 @@
+:root{
+    --black: #170043;
+    --dark: #062F4F;
+    --light: #813772;
+    --red: #B82601;
+    --font: #478fe2;
+    --lightfont: #58afd1;
+}
+
+.home-activity{
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('/img/Background.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-activity > div{
+    width: 70%;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.latest-project,
+.spotify-activity,
+.project-activity{
+    /* background-color: var(--dark); */
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.latest-project{
+    height: 40vh;
+    width: 100%;
+    margin: 1rem 0 0 0;
+    position: relative;
+}.latest-project .right-arrow,
+.latest-project .left-arrow{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border: solid 1px white;
+    border-width: 1px 1px 0 0;
+    position: absolute;
+    transition: all .2s ease;
+}.latest-project .right-arrow:hover,
+.latest-project .left-arrow:hover{
+    height: 50px;
+    width: 50px;
+    border: solid 2px var(--lightfont);
+    border-width: 2px 2px 0 0;
+}.latest-project .right-arrow{
+    transform: rotate(45deg);
+    right: 0;
+}.latest-project .left-arrow{
+    transform: rotate(-135deg);
+    left: 0;
+}
+
+.spotify-activity{
+    height: 30vh;
+    width: 50%;
+    margin: 0 .5rem 0 0;
+    font-size: 5rem;
+    flex-direction: column;
+    color: #1DB954;
+}.spotify-activity-content{
+    font-size: 2rem;
+    color: #18843e;
+}
+.project-activity{
+    height: 30vh;
+    width: 50%;    
+    margin: 0 0 0 .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}.project-activity .heading{
+    font-size: 2rem;
+    font-weight: 200;
+    padding: 0;
+}.project-activity div:nth-child(2){
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: var(--lightfont);
+    padding: 1rem;
+}.project-activity div:nth-child(3){
+    color: gray;
+    font-size: .75rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+}

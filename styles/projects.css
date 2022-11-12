@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root{
+    --black: #170043;
+    --dark: #062F4F;
+    --light: #813772;
+    --red: #B82601;
+    --font: #478fe2;
+    --lightfont: #58afd1;
+    --lighter: #ECB365;
+}
+
+.projects{
+    padding: 4rem;
+    width: 84vw;
+}
+
+.projects .heading div{
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--lightfont);
+}
+
+.projects .subtext{
+    width: 80%;
+    padding: 1rem 4rem 3rem 4rem;
+    font-weight: 200;
+}
+
+.project-grid{
+    display: grid;
+    grid: auto/ auto auto auto auto auto; 
+    width: 100%;
+}
+
+.project-grid .heading{
+    font-size: 1.5rem; padding: 0;
+    transition: all .2s ease;
+    width: fit-content;
+    text-align: center;
+}
+.project-grid .subtext{
+    font-size: 1rem; font-weight: 500;
+    color: gray;
+}
+
+.project-grid img{
+    height: 10vh; width: 10vh;
+}
+
+.project-grid > div{
+    transition: all .2s ease;
+    width: fit-content;
+    /* width: fit-content;
+    position: relative; */
+}.project-grid > div a{
+    transition: all .2s ease;
+    width: inherit; height: inherit;
+    text-decoration: none;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+.project-grid > div .heading .subtext{
+    transition: all .2s ease;
+    opacity: 0;
+    padding: 0;
+    font-size: .5rem; text-align: center;
+    width: 10vw;
+    color: var(--lightfont)
+}
+.project-grid > div:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    background-color: #ffffff30;
+}.project-grid > div:hover .heading{
+    color: var(--lighter);
+}.project-grid > div:hover .heading .subtext{
+    opacity: 1;
+}

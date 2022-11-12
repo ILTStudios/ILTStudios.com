@@ -23,7 +23,8 @@
 }
 
 .skill-content{
-    display: flex;
+    display: flex; justify-content: space-around;
+    margin: 1rem 0 0 0;
 }.skill-content div{
     width: 50%;
 }
@@ -31,35 +32,39 @@
     display: grid;
     grid: auto / auto auto auto; 
     grid-gap: 10px 20px; 
-    padding: 1rem 0rem 3rem 4rem;
+    padding: 1rem 0rem 0rem 0;
 }.dropdowns div{
     font-size: .85rem;
     width: 10vw;
     display: flex;
     flex-direction: column;
     transition: all .2s ease-in-out;
+    /* border: 1px solid white; */
 }.dropdowns div:hover{
     color: var(--font);
     cursor: pointer;
 }.dropdowns div div{
     margin-right: .5rem;
-}.dropdowns div p{
+}.dropdowns div .dropdown-subtext{
     font-size: .7rem;
     color: gray;
 }
-.programs{
+.experience{
     background-color: white;
-    height: 100%;
-    width: 50%;
+    height: 35vh;
+    width: 35% !important;
     padding: .5rem;
     color: black;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
-.dropdown .menu-dropdown p{
-    display: none;
-
+.menu-dropdown div .dropdown-subtext{
+    height: 0px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
 }
-.dropdown .menu-dropdown.open p{
-    display: initial;
+.menu-dropdownopen div .dropdown-subtext{
+    height: 100px;
+    opacity: 1;
+    transition: all .2s ease-in-out;
 }

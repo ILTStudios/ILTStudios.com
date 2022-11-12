@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root{
+    --black: #170043;
+    --dark: #062F4F;
+    --light: #813772;
+    --red: #B82601;
+    --font: #478fe2;
+    --lightfont: #58afd1;
+    --lighter: #ECB365;
+}
+
+.footer{
+    padding: 4rem 6rem 4rem 10rem;
+    width: 100vw;
+    background-color: black;
+    display: flex; flex-direction: column;
+    justify-content: center;
+}
+.footer .heading{
+    display: flex; flex-direction: column;
+}.footer .heading > div:nth-child(1){
+    display: flex; align-items: center;
+}
+.footer .heading > div img{
+    height: 10vh; width: auto;
+    padding: 0 0 0 1rem;
+}
+
+.footer-content{
+    display: grid;
+    grid: auto/ auto auto auto auto;
+    width: 84vw;
+    align-self: center;
+
+    margin: 2rem;
+}.footer-content .subtext{
+    color: white;
+    font-size: 1.25rem; font-weight: 400;
+    transition: all .2 ease;
+    width: fit-content;
+    transition: all .2s ease;
+}.footer-content .subtext:hover{
+    color: var(--lighter);
+    cursor: pointer;
+    transform: scale(1.1);
+}

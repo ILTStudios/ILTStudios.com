@@ -16,8 +16,18 @@
     justify-content: center;
     position: fixed;
     width: 100vw;
+    background-color: var(--lightfont);
+    height: 12vh;
+    transition: all .2s ease;
+}.navbar.open{
+    height: 10vh;
     background-color: #01202c08;
     backdrop-filter: blur(10px);
+}.navbar.open .right div{
+    width: 2rem;
+    height: 2rem;
+}.navbar.open .right img{
+    width: 3rem;
 }
 .right{
     width: 30%;
@@ -31,16 +41,19 @@
     padding: 1rem;
     border-radius: 10rem;
     background-color: white;
+    margin: 0rem 0rem 0rem 1rem;
+    transition: all .2s ease;
 }
 .right img{
     height: fit-content;
     width: 4rem;
+    transition: all .2s ease;
 }
 .left{
     width: 70%;
 }
 .left .navigation{
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
     font-size: .8rem;
     display: flex;
     flex-direction: row-reverse;
