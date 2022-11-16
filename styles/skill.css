@@ -76,3 +76,28 @@
     opacity: 1;
     transition: all .2s ease-in-out;
 }
+
+@media all and (max-width: 900px){
+    .skill{
+        padding: 0;
+        margin: 0;
+    }
+    .skill .subtext{
+        padding: 0 0 0 2rem;
+    }
+    .experience .heading{
+        font-size: 1rem;
+    }
+    .experience .subtext{
+        padding: 0;
+    }
+    .dropdowns div .dropdown-subtext{
+        font-size: .5rem;
+    }
+    .dropdowns{
+        grid: auto / auto auto; 
+    }
+    .dropdowns div{
+        width: 20vw;
+    }
+}

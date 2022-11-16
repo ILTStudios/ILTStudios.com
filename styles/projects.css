@@ -54,13 +54,12 @@
     position: relative; */
 }.project-grid > div a{
     transition: all .2s ease;
-    width: inherit; height: inherit;
+    width: 10vw; height: inherit;
     text-decoration: none;
     display: flex; flex-direction: column; justify-content: center; align-items: center;
 }
-.project-grid > div .heading .subtext{
+.project-grid > div .subtext{
     transition: all .2s ease;
-    opacity: 0;
     padding: 0;
     font-size: .65rem; text-align: center;
     width: 10vw;
@@ -74,4 +73,31 @@
     color: var(--lighter);
 }.project-grid > div:hover .heading .subtext{
     opacity: 1;
+}
+
+@media all and (max-width: 900px){
+    .projects{
+        padding: 1rem 0 1rem 0;
+    }.projects .subtext{
+        padding: 1rem;
+    }
+    .project-grid{
+        grid: auto/ auto auto;
+    }
+
+    .project-grid img{
+        height: 5vh;
+        width: auto;
+    }
+
+    .project-grid .heading{
+        font-size: 1rem;
+    }
+    .project-grid > div .subtext{
+        font-size: .5rem;
+        width: 100%;
+    }
+    .project-grid > div a{
+        width: 25vw;
+    }
 }

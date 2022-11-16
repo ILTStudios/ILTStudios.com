@@ -39,3 +39,22 @@
 }.image img{
     border-radius: 10rem;
 }
+
+@media all and (max-width: 900px){
+    .about{
+        padding: 0;
+        width: 100vw;
+    }
+    .about .heading{
+        font-size: 1.5rem;
+    }
+    .about .subtext{
+        width: 100%;
+        font-size: .5rem;
+        padding: 1rem;
+    }
+    .image img{
+        width: 10rem;
+        height: auto;
+    }
+}

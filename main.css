@@ -2,6 +2,7 @@
 html{
     scroll-behavior: smooth;
 }
+
 :root{
     --black: #170043;
     --dark: #062F4F;
@@ -84,3 +85,32 @@ body{
 }
 
 /**/
+@media all and (max-width: 900px){
+    body{
+        height: auto; width: 100vw;
+    }
+    .main{
+        width: 100vw;
+        padding: 0;
+    }
+    .introduction{
+        padding: .5rem 2rem .5rem 2rem;
+    }
+    .introduction .heading{
+        font-size: 1rem;
+    }
+    .introduction .subtext{
+        font-size: .5rem;
+    }
+    .heading{
+        font-size: 1rem;
+    }.subtext{
+        font-size: .5rem;
+    }
+
+    .underline{
+        width: 1rem;
+    }.underline.open{
+        width: 2rem;
+    }
+}

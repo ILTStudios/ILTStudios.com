@@ -39,23 +39,35 @@ box.forEach(element => {
 //Burger Menu
 const burger = document.querySelector('.menu-trigger');
 const menu = document.querySelector('.menu');
-menu.style.width = "0%";
-menu.style.opacity = 0;
 var is_open = false;
 
 burger.addEventListener('click', () => {
     if(is_open == false){
         burger.classList.add('open');
-        menu.style.width = "30%";
-        menu.style.opacity = 1;
+        menu.classList.add('open');
         is_open = true;
     }else{
         burger.classList.remove('open');
-        menu.style.width = "0%";
-        menu.style.opacity = 0;
+        menu.classList.remove('open');
         is_open = false;
     }
-})
+});
+
+const other_burger = document.querySelector('.navmenu-trigger');
+var other_open = false;
+const mobile_menu = document.querySelector('.mobile-navbar');
+other_burger.addEventListener('click', (e) => {
+    e.preventDefault();
+    if(other_open == false){
+        other_burger.classList.add('open');
+        other_open = true;
+        
+    }else{
+        other_burger.classList.remove('open');
+        other_open = false;
+
+    }
+});
 
 /* Drop down animation */
 const dropdown_menus = document.querySelector('.dropdowns');
@@ -176,8 +188,6 @@ document.querySelectorAll('#know-me-menu').forEach(element => {
         });
         
         burger.classList.remove('open');
-        menu.style.width = "0%";
-        menu.style.opacity = 0;
         is_open = false;
     });
 });

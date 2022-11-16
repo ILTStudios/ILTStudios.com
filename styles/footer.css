@@ -44,3 +44,16 @@
     cursor: pointer;
     transform: scale(1.1);
 }
+
+@media all and (max-width: 900px){
+    .footer{
+        padding: 0;
+    }
+    .footer .heading > div img{
+        height: 5vh;
+        padding: 0 0 0 .5rem;
+    }
+    .footer-content .subtext{
+        font-size: .5rem;
+    }
+}
