@@ -100,4 +100,7 @@
     .dropdowns div{
         width: 20vw;
     }
+    .menu-dropdown div{
+        font-size: .5rem;
+    }
 }

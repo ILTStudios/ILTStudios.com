@@ -60,12 +60,12 @@ other_burger.addEventListener('click', (e) => {
     e.preventDefault();
     if(other_open == false){
         other_burger.classList.add('open');
-        other_open = true;
-        
+        mobile_menu.classList.add('open');
+        other_open = true;        
     }else{
         other_burger.classList.remove('open');
+        mobile_menu.classList.remove('open');
         other_open = false;
-
     }
 });
 
@@ -188,6 +188,7 @@ document.querySelectorAll('#know-me-menu').forEach(element => {
         });
         
         burger.classList.remove('open');
+        menu.classList.remove('open');
         is_open = false;
     });
 });
